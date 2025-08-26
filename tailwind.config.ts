@@ -52,6 +52,27 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
+				memory: {
+					DEFAULT: 'hsl(var(--memory))',
+					foreground: 'hsl(var(--memory-foreground))',
+					accent: 'hsl(var(--memory-accent))'
+				},
+				cpu: {
+					DEFAULT: 'hsl(var(--cpu))',
+					foreground: 'hsl(var(--cpu-foreground))'
+				},
+				alu: {
+					DEFAULT: 'hsl(var(--alu))',
+					foreground: 'hsl(var(--alu-foreground))'
+				},
+				history: {
+					DEFAULT: 'hsl(var(--history))',
+					foreground: 'hsl(var(--history-foreground))'
+				},
+				register: {
+					DEFAULT: 'hsl(var(--register))',
+					foreground: 'hsl(var(--register-foreground))'
+				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
