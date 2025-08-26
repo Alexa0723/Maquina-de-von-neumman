@@ -15,14 +15,14 @@ export const MemorySection = () => {
       <div className="space-y-3">
         {memoryRows.map((row, rowIndex) => (
           <div key={rowIndex} className="flex items-center gap-2">
-            <div className="w-16 text-sm font-medium text-memory-foreground bg-card border border-memory-foreground/30 px-2 py-1 rounded text-center">
+            <div className="w-20 text-sm font-medium text-memory-foreground bg-card border border-memory-foreground/30 px-3 py-2 rounded text-center">
               {row.label}
             </div>
             <div className="flex gap-1 flex-wrap">
               {row.values.map((value, colIndex) => (
                 <div
                   key={colIndex}
-                  className="text-xs font-mono bg-card border border-memory-foreground/30 px-2 py-1 rounded min-w-[60px] text-center text-memory-foreground"
+                  className="text-xs font-mono bg-card border border-memory-foreground/30 px-3 py-2 rounded min-w-[80px] text-center text-memory-foreground"
                 >
                   {value}
                 </div>
@@ -51,6 +51,9 @@ export const MemorySection = () => {
             </div>
           </div>
         </div>
+        
+        {/* Golden RAM stripe */}
+        <div className="mt-4 h-3 bg-gradient-to-r from-yellow-400 to-yellow-600 rounded-sm border border-yellow-500"></div>
       </div>
     </Card>
   );

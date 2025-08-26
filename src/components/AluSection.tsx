@@ -8,20 +8,23 @@ export const AluSection = () => {
       </div>
       
       <div className="flex-1 space-y-4">
-        {/* Acumulador */}
-        <div className="space-y-2">
-          <div className="bg-card border border-alu-foreground/30 px-3 py-1 rounded text-center">
-            <span className="text-sm font-medium text-alu-foreground">ACUMULADOR</span>
+        {/* Acumulador and Entrada in columns */}
+        <div className="flex gap-3">
+          {/* Acumulador */}
+          <div className="flex-1 space-y-1">
+            <div className="bg-card border border-alu-foreground/30 px-2 py-1 rounded text-center">
+              <span className="text-xs font-medium text-alu-foreground">ACUMULADOR</span>
+            </div>
+            <div className="bg-card border border-alu-foreground/30 rounded h-12"></div>
           </div>
-          <div className="bg-card border border-alu-foreground/30 rounded h-16"></div>
-        </div>
-        
-        {/* Entrada */}
-        <div className="space-y-2">
-          <div className="bg-card border border-alu-foreground/30 px-3 py-1 rounded text-center">
-            <span className="text-sm font-medium text-alu-foreground">ENTRADA</span>
+          
+          {/* Entrada */}
+          <div className="flex-1 space-y-1">
+            <div className="bg-card border border-alu-foreground/30 px-2 py-1 rounded text-center">
+              <span className="text-xs font-medium text-alu-foreground">ENTRADA</span>
+            </div>
+            <div className="bg-card border border-alu-foreground/30 rounded h-12"></div>
           </div>
-          <div className="bg-card border border-alu-foreground/30 rounded h-16"></div>
         </div>
         
         {/* ALU Logic Symbol */}
@@ -44,22 +47,6 @@ export const AluSection = () => {
               <line x1="60" y1="30" x2="80" y2="30" stroke="currentColor" strokeWidth="2"/>
               {/* Output circle */}
               <circle cx="70" cy="30" r="3" fill="none" stroke="currentColor" strokeWidth="2"/>
-            </svg>
-          </div>
-        </div>
-        
-        {/* Arrow button */}
-        <div className="flex justify-center mt-4">
-          <div className="bg-secondary border border-alu-foreground/30 p-2 rounded">
-            <svg width="24" height="16" viewBox="0 0 24 16" className="text-alu-foreground">
-              <path 
-                d="M1 8 L20 8 M16 4 L20 8 L16 12" 
-                fill="none" 
-                stroke="currentColor" 
-                strokeWidth="2" 
-                strokeLinecap="round" 
-                strokeLinejoin="round"
-              />
             </svg>
           </div>
         </div>

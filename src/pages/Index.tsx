@@ -34,10 +34,10 @@ const Index = () => {
           </div>
         </div>
         
-        {/* Connection Arrow */}
-        <div className="flex justify-center mt-4">
-          <div className="bg-secondary p-3 rounded-lg shadow-sm">
-            <ArrowRight className="w-6 h-6 text-primary" />
+        {/* Connection Arrow - moved outside */}
+        <div className="flex justify-center mt-6">
+          <div className="bg-secondary border border-primary/30 p-3 rounded-lg shadow-sm">
+            <ArrowRight className="w-8 h-8 text-primary" />
           </div>
         </div>
       </div>
