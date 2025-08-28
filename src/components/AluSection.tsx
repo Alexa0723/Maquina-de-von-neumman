@@ -1,6 +1,6 @@
 import { Card } from "@/components/ui/card";
 
-export const AluSection = () => {
+export const AluSection = ({ accumulator, input, highlighted }) => {
   return (
     <Card className="bg-alu border-alu-foreground/20 p-4 h-full flex flex-col">
       <div className="text-center mb-4">
@@ -15,7 +15,11 @@ export const AluSection = () => {
             <div className="bg-card border border-alu-foreground/30 px-2 py-1 rounded text-center">
               <span className="text-xs font-medium text-alu-foreground">ACUMULADOR</span>
             </div>
-            <div className="bg-card border border-alu-foreground/30 rounded h-12"></div>
+            <div className={`bg-card border border-alu-foreground/30 rounded h-12 flex items-center justify-center font-mono text-lg text-alu-foreground ${
+                highlighted.alu === "acumulador" ? "bg-yellow-400" : ""
+              }`}>
+              {accumulator}
+            </div>
           </div>
           
           {/* Entrada */}
@@ -23,29 +27,28 @@ export const AluSection = () => {
             <div className="bg-card border border-alu-foreground/30 px-2 py-1 rounded text-center">
               <span className="text-xs font-medium text-alu-foreground">ENTRADA</span>
             </div>
-            <div className="bg-card border border-alu-foreground/30 rounded h-12"></div>
+            <div className={`bg-card border border-alu-foreground/30 rounded h-12 flex items-center justify-center font-mono text-lg text-alu-foreground ${
+                highlighted.alu === "input" ? "bg-yellow-400" : ""
+              }`}>
+              {input}
+            </div>
           </div>
         </div>
         
         {/* ALU Logic Symbol */}
         <div className="flex-1 flex items-center justify-center">
           <div className="relative">
-            {/* Logic gate representation */}
             <svg width="80" height="60" viewBox="0 0 80 60" className="text-alu-foreground">
-              {/* AND gate-like symbol */}
               <path 
                 d="M10 10 L40 10 Q60 10 60 30 Q60 50 40 50 L10 50 Z" 
                 fill="none" 
                 stroke="currentColor" 
                 strokeWidth="3"
               />
-              {/* Input lines */}
               <line x1="0" y1="20" x2="10" y2="20" stroke="currentColor" strokeWidth="2"/>
               <line x1="0" y1="30" x2="10" y2="30" stroke="currentColor" strokeWidth="2"/>
               <line x1="0" y1="40" x2="10" y2="40" stroke="currentColor" strokeWidth="2"/>
-              {/* Output line */}
               <line x1="60" y1="30" x2="80" y2="30" stroke="currentColor" strokeWidth="2"/>
-              {/* Output circle */}
               <circle cx="70" cy="30" r="3" fill="none" stroke="currentColor" strokeWidth="2"/>
             </svg>
           </div>
