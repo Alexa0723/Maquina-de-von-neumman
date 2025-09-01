@@ -123,7 +123,7 @@ export const App = () => {
             setHighlighted({ memory: targetAddress, cpu: null, alu: "acumulador" });
             setHistory((prev) => [...prev, `[EXECUTE] Moviendo ${dataToMove} a la dirección ${operand}.`]);
           } else {
-             // Lógica para otras operaciones (si las implementas)
+            
           }
 
           setProgramCounter((prev) => prev + 1);
@@ -156,12 +156,12 @@ export const App = () => {
         </h1>
         
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 h-full">
-          {/* Memory Section - Top Full Width */}
+          {/* Memoria*/}
           <div className="lg:col-span-4">
             <MemorySection memoryRows={memoryRows} highlighted={highlighted} />
           </div>
           
-          {/* CPU Section - Bottom Left */}
+          {/* CPU*/}
           <div className="lg:col-span-1">
             <CpuSection
               programCounter={programCounter}
@@ -171,12 +171,12 @@ export const App = () => {
             />
           </div>
           
-          {/* History Section - Bottom Center */}
+          {/* Historial*/}
           <div className="lg:col-span-2">
             <HistorySection history={history} />
           </div>
           
-          {/* ALU Section - Bottom Right */}
+          {/* ALU */}
           <div className="lg:col-span-1">
             <AluSection
               accumulator={accumulator}
@@ -186,7 +186,7 @@ export const App = () => {
           </div>
         </div>
         
-        {/* Connection Arrow - moved outside */}
+        {/* Boton*/}
         <div className="flex justify-center mt-6">
           <ControlButton onClick={runStep} isFinished={isFinished} />
         </div>
